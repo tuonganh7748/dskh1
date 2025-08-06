@@ -29,3 +29,16 @@ function checkCIC() {
   const result = document.getElementById('cicResult');
   result.textContent = 'Khách hàng không nợ xấu, nợ chú ý.';
 }
+<script>
+  document.getElementById("customerForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Ngăn form submit nếu không muốn tải lại trang
+
+    // Ở đây bạn có thể thêm xử lý lưu dữ liệu, gọi API, v.v...
+
+    // Hiển thị thông báo
+    alert("Tạo hồ sơ thành công");
+
+    // Nếu bạn muốn reset form:
+    this.reset();
+  });
+</script>
