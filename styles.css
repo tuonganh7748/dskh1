@@ -1,6 +1,6 @@
 body {
   font-family: Arial, sans-serif;
-  background: #e6f2ff;
+  background: #e6f0ff; 
   margin: 0;
   padding: 20px;
 }
@@ -64,5 +64,6 @@ table, td, th {
   padding: 8px;
   text-align: left;
 }
+
 
 
