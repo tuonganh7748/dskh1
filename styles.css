@@ -1,0 +1,62 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #e6f2ff;
+  margin: 0;
+  padding: 20px;
+}
+
+.login-container {
+  max-width: 400px;
+  margin: auto;
+  padding: 40px;
+  background: white;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.login-container input,
+button {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+button {
+  background: #005ce6;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.logo {
+  width: 200px;
+}
+
+.logo-small {
+  width: 100px;
+}
+
+nav button {
+  margin: 5px;
+  background-color: red;
+  color: white;
+  border-radius: 5px;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.section {
+  margin-top: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table, td, th {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}

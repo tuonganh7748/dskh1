@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Đăng nhập - HD Saison</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="login-page">
+  <div class="login-container">
+    <img src="logo.png" alt="HD Saison Logo" class="logo"/>
+    <h1>Quản Lý Khách Hàng</h1>
+    <form id="loginForm">
+      <input type="text" id="username" placeholder="Tài khoản" required />
+      <span class="error" id="usernameError">Bắt buộc nhập tài khoản</span>
+      <input type="password" id="password" placeholder="Mật khẩu" required />
+      <button type="submit">Đăng nhập</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('loginForm').onsubmit = function(e) {
+      e.preventDefault();
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+      if (username && password) {
+        window.location.href = 'dashboard.html';
+      }
+    };
+  </script>
+</body>
+</html>
