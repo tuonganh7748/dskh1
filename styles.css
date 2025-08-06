@@ -12,6 +12,10 @@ body {
   background: white;
   border-radius: 10px;
   text-align: center;
+  display: flex;
+  justify-content: center; /* canh ngang giữa */
+  align-items: center;      /* canh dọc giữa (nếu cần) */
+  
 }
 
 .login-container input,
@@ -60,4 +64,5 @@ table, td, th {
   padding: 8px;
   text-align: left;
 }
+
 
