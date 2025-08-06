@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Quản Lý Khách Hàng</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dashboard-page">
+  <header>
+    <img src="logo.png" class="logo-small" alt="HD Saison">
+    <span class="greeting">Xin chào: admin</span>
+  </header>
+
+  <h2>Quản Lý Khách Hàng</h2>
+
+  <nav>
+    <button onclick="showSection('create')">Tạo Mới Khách Hàng</button>
+    <button onclick="showSection('list')">Danh Sách Khách Hàng</button>
+    <button onclick="showSection('search')">Tìm Kiếm</button>
+    <button onclick="showSection('unprocessed')">Cavet Hàng Quá Hạn</button>
+    <button onclick="showSection('overdue')">KH Quá Hạn Thanh Toán</button>
+    <button onclick="showSection('cic')">Check CIC</button>
+  </nav>
+
+  <!-- Tạo Mới -->
+  <section id="create" class="section">
+    <h3>Tạo Mới Khách Hàng</h3>
+    <form id="customerForm">
+      <input type="text" placeholder="Số hợp đồng" required />
+      <input type="text" placeholder="Họ và tên" required />
+      <input type="text" placeholder="Số điện thoại" required />
+      <input type="text" placeholder="CCCD" required />
+      <select>
+        <option>Cavet gốc / Cavet photo</option>
+        <option>Gốc</option>
+        <option>Photo</option>
+      </select>
+      <input type="date" placeholder="Ngày Upp / Gửi" required />
+      <button type="submit">Lưu</button>
+    </form>
+  </section>
+
+  <!-- Danh sách -->
+  <section id="list" class="section" style="display:none;">
+    <h3>Danh Sách Khách Hàng</h3>
+    <table id="customerTable">
+      <thead>
+        <tr>
+          <th>Số HP</th>
+          <th>Họ tên</th>
+          <th>SĐT</th>
+          <th>CCCD</th>
+          <th>Cavet</th>
+          <th>Ngày Upp / Gửi</th>
+          <th>Hành động</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </section>
+
+  <!-- Các section còn lại -->
+  <section id="search" class="section" style="display:none;">
+    <h3>Tìm Kiếm</h3>
+    <input type="text" id="searchInput" placeholder="Nhập từ khoá...">
+    <ul id="searchResults"></ul>
+  </section>
+
+  <section id="unprocessed" class="section" style="display:none;">
+    <h3>Cavet Chưa Xử Lý</h3>
+    <ul id="unprocessedList"></ul>
+  </section>
+
+  <section id="overdue" class="section" style="display:none;">
+    <h3>Khách Hàng Quá Hạn Thanh Toán</h3>
+    <p>Chức năng đang phát triển...</p>
+  </section>
+
+  <section id="cic" class="section" style="display:none;">
+    <h3>Check CIC</h3>
+    <input type="text" id="cicInput" placeholder="Nhập CCCD">
+    <button onclick="checkCIC()">Check</button>
+    <p id="cicResult"></p>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
